@@ -1,0 +1,128 @@
+@import '../../global.scss';
+
+.intro {
+    background-color: white;
+    display: flex;
+
+    @include mobile {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .left {
+        flex: 1;
+        overflow: hidden;
+
+        .imgWrapper {
+            width: 750px;
+            height: 750px;
+            background-color: crimson;
+            border-radius: 9999px;
+            -webkit-border-radius: 9999px;
+            -moz-border-radius: 9999px;
+            -ms-border-radius: 9999px;
+            -o-border-radius: 9999px;
+            display: flex;
+            align-items: flex-start;
+            justify-content: center;
+            overflow: hidden;
+
+            @include mobile {
+                width: 600px;
+                height: 600px;
+                margin-top: 5px;
+                padding-left: 50px;
+            }
+
+            img {
+                height: 100%;
+                object-fit: cover;
+
+                @include mobile {
+                    height: 100%;
+                }
+            }
+        }
+    }
+
+    .right {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        position: relative;
+
+        .intro-text-wrapper {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding-left: 50px;
+
+            @include mobile {
+                padding-left: 0;
+            }
+
+            h2 {
+                font-size: 40px;
+            }
+
+            h1 {
+                font-size: 60px;
+                margin: 10px 0;
+
+                @include mobile {
+                    font-size: 40px;
+                    margin: 30px 0;
+                }
+            }
+
+            h3 {
+                font-size: 30px;
+
+                span {
+                    font-size: inherit;
+                    color: crimson;
+                }
+
+                .ityped-cursor {
+                    font-size: 2.2rem;
+                    opacity: 1;
+                    animation: blink 0.3s infinite;
+                    animation-direction: alternate;
+                }
+
+                @keyframes blink {
+                    100% {
+                        opacity: 0;
+                    }
+                }
+
+
+            }
+        }
+
+        a {
+            position: absolute;
+            bottom: 10px;
+            left: 50%;
+            transform: translateX(-50%);
+            -webkit-transform: translateX(-50%);
+            -moz-transform: translateX(-50%);
+            -ms-transform: translateX(-50%);
+            -o-transform: translateX(-50%);
+            animation: arrowBlink 2s infinite;
+            -webkit-animation: arrowBlink 2s ease-in-out infinite;
+
+            img {
+                width: 30px;
+            }
+
+            @keyframes arrowBlink {
+                100% {
+                    opacity: 0;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,132 @@
+@import '../../global.scss';
+
+.portfolio {
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    h1 {
+        font-size: 60px;
+
+        @include mobile {
+            font-size: 40px;
+        }
+    }
+
+    ul {
+        margin: 30px 0;
+        list-style: none;
+        display: flex;
+
+        @include mobile {
+            padding-left: unset;
+        }
+
+        li {
+            font-size: 14px;
+            margin: 0 30px;
+            padding: 7px;
+            cursor: pointer;
+            border-radius: 10px;
+            -webkit-border-radius: 10px;
+            -moz-border-radius: 10px;
+            -ms-border-radius: 10px;
+            -o-border-radius: 10px;
+            transition: all .5s ease-in-out;
+            -webkit-transition: all .5s ease-in-out;
+            -moz-transition: all .5s ease-in-out;
+            -ms-transition: all .5s ease-in-out;
+            -o-transition: all .5s ease-in-out;
+            user-select: none;
+
+            @include mobile {
+                margin: 0 10px;
+
+            }
+
+            &.active {
+                background-color: $main-color;
+                color: white;
+            }
+        }
+
+    }
+
+    .portfolio-list-container {
+        width: 50%;
+        display: grid;
+        justify-items: center;
+        align-content: center;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(3, 1fr);
+        grid-row-gap: 10px;
+        grid-column-gap: 30px;
+        // display: flex;
+        // justify-content: center;
+        // align-items: center;
+        // flex-wrap: wrap;
+
+        @include mobile {
+            width: 100%;
+            grid-template-columns: repeat(2, 1fr);
+            grid-template-rows: unset;
+            grid-row-gap: 30px;
+            grid-column-gap: unset;
+        }
+
+        .portfolio-list-item {
+            width: 220px;
+            height: 150px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+            border: 1px solid #e8e8e8;
+            box-shadow: 0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1);
+            border-radius: 10px;
+            -webkit-border-radius: 10px;
+            -moz-border-radius: 10px;
+            -ms-border-radius: 10px;
+            -o-border-radius: 10px;
+            z-index: 1;
+            cursor: pointer;
+            transition: all .5s ease-in-out;
+            -webkit-transition: all .5s ease-in-out;
+            -moz-transition: all .5s ease-in-out;
+            -ms-transition: all .5s ease-in-out;
+            -o-transition: all .5s ease-in-out;
+
+            @include mobile {
+                width: 190px;
+                height: 140px;
+            }
+
+            &:hover {
+                background-color: $main-color;
+
+                img {
+                    opacity: .3;
+                }
+
+                span {
+                    opacity: 1;
+                }
+            }
+
+            span {
+                position: absolute;
+                font-size: 14px;
+                color: white;
+                opacity: 0;
+                font-weight: 500;
+            }
+
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+        }
+    }
+}
