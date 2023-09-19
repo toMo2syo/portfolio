@@ -56,7 +56,6 @@ export default function Portfolio() {
             }
             default: {
                 setSelectedList(featuredPortfolio)
-
             }
         }
     }, [selected])
