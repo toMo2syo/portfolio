@@ -2,4 +2,4 @@
 
 this is a personal portfolio website
 
-followed by lama dev see https://www.youtube.com/@LamaDev
+followed by lama dev see https://www.youtube.com/@LamaDev on youtube
