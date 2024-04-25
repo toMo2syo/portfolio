@@ -1,5 +1,1 @@
-# portfolio
-
-this is a personal portfolio website
-
-followed by lama dev see https://www.youtube.com/@LamaDev on youtube
+this project follow with lama dev,see more https://www.youtube.com/@LamaDev on youtube
